@@ -1,0 +1,33 @@
+Stop Words
+	This data structure will store any list of stop words given in the command line. 
+I will store these words in an array with a binary search algorithm.  The reson for
+this is the array is easy preform a binary search on and is very fast at inserting 
+the words. Also, the list of stop words is more than likely and ordered list so if I 
+tried to use a Binary Search Tree the data would turn into a linked list which would 
+be very slow to search. Searching is very important with this program because it will
+be search millions of times during the program.
+
+Keyword Index
+	I will use a Binary Search TreeMap for this data structure. This will be the 
+structure from which the xml output is generated. It will hold occurence sets that 
+corspond to specific words. This structure is fast too search and will be ideal for
+generating the output of the crawler.
+
+Occurrence Set
+	I will use a Binary Search TreeMap for this data structure. This structure will 
+hold occurrence objects, which hold a page object a word and a count of how many
+web pages that it appears on and a set of page pointers of pages that word appears 
+on. The key values for this data structure will be the words. The tree map will be 
+ideal because it allows for fast searching and the words will be random so you do
+not have to worry about a unbalanced list.
+
+Page History
+	I will use a Binary Search TreeMap for this data structure. This structure will
+simply hold web page urls. The binary search tree is ideal because it allows for 
+rapid searching as this structure will be used to check to see if a url has already
+been processed. The urls will be fairly random so balancing is not a worry.
+
+Page Queue
+	I linked list will suffice for this structure. It will hold the urls to be 
+processed. The linked list will be implemented as a queue and will never be searched 
+so time issues are not a worry.
